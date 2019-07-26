@@ -23,7 +23,7 @@ const FolderService = {
   updateFolder(db, id, newFolder){
     return db('folders')
       .where({ id })
-      .insert(newFolder);
+      .update(newFolder);
   }
 };
 
