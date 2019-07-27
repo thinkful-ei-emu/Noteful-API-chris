@@ -16,8 +16,10 @@ const morganOption = (NODE_ENV === 'production')
 app.use(morgan(morganOption));
 app.use(helmet());
 app.use(cors());
+app.use(express.json());
 
 app.use('/api/folders', folderRouter);
+
 app.use('/api/notes', noteRouter);
 
 app.get('/', (req, res) => {
